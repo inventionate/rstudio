@@ -1913,3 +1913,8 @@
    fmt <- "'%s' is not a length-one character vector"
    stop(sprintf(fmt, .rs.deparse(substitute(object))), call. = FALSE)
 })
+
+.rs.addFunction("isExternalPointer", function(object)
+{
+   identical(typeof(object), "externalptr")
+})
